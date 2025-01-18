@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include "../header/lists.h"
 
-struct node{
-    int data;
-    struct node* next;
-};
 
 int main() {
-    struct node *head;
-    struct node *node1;
-    struct node *node2;
-    struct node *node3;
+    int array[3] = {1, 2, 3};
+    printf("Gli array contengono rispettivamente: %d, %d, %d\n", array[0], array[1], array[2]);
+    Node* head = NULL;
+    append(&head, 1);
+    append(&head, 2);
+    append(&head, 3);
+    printList(head);
+    freeList(head);
 
-
-    printf("Hello, World!\n");
+    printf("Programma eseguito con successo!\n");
     return 0;
 }
